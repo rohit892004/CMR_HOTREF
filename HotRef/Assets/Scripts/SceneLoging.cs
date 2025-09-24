@@ -15,4 +15,14 @@ public class SceneLoging : MonoBehaviour
     {
         SceneManager.LoadScene("");
     }
+
+    public void Main_Menu()
+    {
+        SceneManager.LoadScene("CMR_Hot_Refining_VR_Language_Selection");
+    }
+
+    public void Application_Quit()
+    {
+        Application.Quit();
+    }
 }
