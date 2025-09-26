@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/CMR_Hot_Refining_VR_Language_Selection.unity
+    guid: 8c9d4f95f5fa3ca4db3875b3fa7233dd
+  - enabled: 1
     path: Assets/Scenes/CMR_Hot_Refining_VR.unity
     guid: 0c6d3a8252fa9d140987ba78b3e5446f
   m_configObjects:
