@@ -14,11 +14,15 @@ public class ThirdScene : MonoBehaviour
     public GameObject[] emptyGroupsToClear;  // Group1 ke jagah array
     public ActionMode groupAction = ActionMode.Delete;
 
-    public GameObject[] emptyGroupsToActivate; // Group2 ke jagah array
+    [Header("Groups to Activate")]
+    public GameObject[] emptyGroupsToActivate;  // Group2
+
+    [Header("Extra Groups to Activate")]
+    public GameObject[] extraGroupsToActivate;  // 🔥 नया group (Group3)
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("CubeActive")) // Player tag required
+        if (other.CompareTag("CubeActive")) // Tag check
         {
             // Activate / Deactivate main objects
             if (objectToActivate != null) objectToActivate.SetActive(true);
@@ -42,7 +46,13 @@ public class ThirdScene : MonoBehaviour
                 if (group != null) SetChildrenActive(group, true);
             }
 
-            // ⚡ Player ko bhi delete karna hai
+            // Handle extra groups to activate
+            foreach (GameObject group in extraGroupsToActivate)
+            {
+                if (group != null) SetChildrenActive(group, true);
+            }
+
+            // ⚡ Player (collider object) delete
             Destroy(other.gameObject);
         }
     }
@@ -63,4 +73,3 @@ public class ThirdScene : MonoBehaviour
         }
     }
 }
-
