@@ -13,7 +13,7 @@ public class SceneLoging : MonoBehaviour
 
     public void HindiScene()
     {
-        SceneManager.LoadScene("CMR_Hot_Refining_Hindi");
+        SceneManager.LoadScene("CMR_Hot_Refining_Hindi_02");
     }
 
     public void Main_Menu()
